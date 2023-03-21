@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ubuntu-vnc:
+    container_name: ubuntu-vnc
+    image: "dorowu/ubuntu-desktop-lxde-vnc"
+    environment:
+      - RESOLUTION=1920x1080
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - 6080:80
+    restart: unless-stopped
